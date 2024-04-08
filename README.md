@@ -33,7 +33,7 @@ A step-by-step series of examples that tell you how to get a development environ
 
 Configure your environment variables appropriately:
 env
- .env file
+# .env file
 ```text
 
 DB_URI=mongodb://localhost:27017/your-db
@@ -45,36 +45,20 @@ Start the application with the following command:
 ```bash
 node server.js  # Starts the server
 ```
-
-Register User
-http
-POST /api/auth/register
-Login User
-http
-POST /api/auth/login
-Refresh Token
-http
-POST /api/auth/refresh
-CRUD Operations
-http
-# Create a resource
-POST /api/resource/
-
-# Read a resource
-GET /api/resource/:id
-
-# Update a resource
-PUT /api/resource/:id
-
-# Delete a resource
-DELETE /api/resource/:id
-File Upload
-http
-POST /api/files/upload
-Download File
-http
-GET /api/files/download/:filename
-Running Tests
+### Endpoints Overview
+User Registration:POST /api/auth/register
+User Login:POST /api/auth/login
+Token Refresh:POST /api/auth/refresh
+<br/>
+CRUD for Resources:
+Create: POST /api/resource/
+Read: GET /api/resource/:id
+Update: PUT /api/resource/:id
+Delete: DELETE /api/resource/:id
+<br/>
+File Upload:POST /api/files/upload
+File Download:GET /api/files/download/:filename
+### Running Tests
 To run the automated tests for this system, use:
 bash
 npm test
