@@ -33,7 +33,7 @@ A step-by-step series of examples that tell you how to get a development environ
 
 Configure your environment variables appropriately:
 env
-# .env file
+ .env file
 ```text
 
 DB_URI=mongodb://localhost:27017/your-db
