@@ -19,6 +19,8 @@ const authRoutes = require('./src/routes/authRoutes');
 
 const taskRoutes = require('./src/routes/taskRoutes');
 
+const fileRoutes = require('./src/routes/fileRoutes');
+
 
 app.use(cors());  // Allows all cross-origin requests
 
@@ -29,6 +31,10 @@ app.use(express.json());
 app.use('/api/user', authRoutes);
 
 app.use('/api/tasks', taskRoutes);
+
+app.use('/api/files', fileRoutes);
+
+app.use('/uploads', express.static('uploads'));
 
 
 const PORT = process.env.PORT || 3001;
