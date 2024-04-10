@@ -1,8 +1,8 @@
 # AuthCRUDFileManager
-<p align="center">
-  <img src="https://i.ibb.co/LdNJmXm/task2-1.png" alt="Swagger UI"/>
-</p>
-AuthCRUDFileManager is a Node.js-based API solution for secure authentication, CRUD operations, and file management. This API leverages modern security practices to offer a robust backend suitable for various applications requiring user management and file storage capabilities.
+<b>AuthCRUDFileManager is a Node.js-based API solution for secure authentication, CRUD operations, and file management. This API leverages modern security practices to offer a robust backend suitable for various applications requiring user management and file storage capabilities.</b>
+
+![Swagger UI](/images/task2_1.png)
+![Swagger UI](/images/task2_2.png)
 
 ## Features
 
@@ -12,6 +12,42 @@ AuthCRUDFileManager is a Node.js-based API solution for secure authentication, C
 - Input validation to ensure data integrity.
 - Error handling middlewares for graceful error responses.
 - Swagger documentation for API endpoints.
+
+## Structure
+
+Below is an outline of the important files and folders included in the AuthCRUDFileManager project:
+```
+/AuthCRUDFileManager
+|-- /node_modules
+|-- src
+    |-- /config
+        |-- config.js
+        |-- swagger.js
+    |-- /controllers
+        |-- authController.js
+        |-- userController.js
+        |-- fileController.js
+        |-- validation.js
+    |-- /middleware
+        |-- authMiddleware.js
+        |-- errorHandler.js
+        |-- fileUploadMiddleware.js
+    |-- /models
+        |-- userModel.js
+        |-- taskModel.js
+    |-- /routes
+        |-- authRoutes.js
+        |-- userRoutes.js
+        |-- fileRoutes.js
+|-- /uploads
+|-- server.js
+|-- .gitignore
+|-- .env
+|-- README.md
+|-- package-loack.json
+|-- package.json
+
+```
 
 ## Getting Started
 
@@ -76,7 +112,8 @@ Replace http://localhost:3001 with your production URL if applicable
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 ### Authors
-. Initial work -sarathk73
+
+- Sarath K - Initial work - [sarathk73](https://github.com/sarathk73)
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details
