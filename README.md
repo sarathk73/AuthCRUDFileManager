@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them:
 
-```bash
+```
 node.js
 npm
 A MongoDB database
@@ -31,17 +31,30 @@ A step-by-step series of examples that tell you how to get a development environ
 1. Clone the repository:
 ```bash
    git clone https://github.com/sarathk73/AuthCRUDFileManager.git
+   cd AuthCRUDFileManager
+
+
 ```
+Install the necessary node modules:
+ ```bash
+   npm install
+```
+
 
 ### Configuration
 
 Configure your environment variables appropriately:
-env
-# .env file
-```text
+```plain
+Create a .env file in the root directory and add the following:
+DB_CONNECTION=mongodb+srv://your-db-connection-string
+JWT_SECRET=your-secret
+# JWT secret for signing tokens
+JWT_SECRET=your-secret
 
-DB_URI=mongodb://localhost:27017/your-db
-JWT_SECRET=your_secret_key
+# Refresh token secret for signing refresh tokens
+REFRESH_TOKEN_SECRET=your-secret
+
+PORT=3001
 ```
 
 ### Usage
