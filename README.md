@@ -6,12 +6,21 @@
 
 ## Features
 
-- JWT (JSON Web Tokens) based authentication system.
-- CRUD operations for user management.
-- Secure file upload and management.
-- Input validation to ensure data integrity.
-- Error handling middlewares for graceful error responses.
-- Swagger documentation for API endpoints.
+- **JWT Authentication**: Implementing JSON Web Tokens (JWT) for secure authentication and session management.
+- **User CRUD Operations**: Full suite of CRUD operations for comprehensive user management.
+- **File Handling**: Secure uploading, storage, and management of files.
+- **Data Validation**: Ensuring data integrity and correctness with input validation.
+- **Error Handling**: Graceful error responses via middleware for improved API resilience.
+- **API Documentation**: Utilizing Swagger for clear and structured API endpoint documentation.
+- **Rate Limiting**: Protection against brute-force attacks with rate limit controls on user authentication routes.
+- **Security Practices**: Applying secure HTTP headers with Helmet to protect against common web vulnerabilities.
+- **Performance**: Employing compression to decrease response times through reduced payload size.
+- **Logging**: Utilizing morgan to log HTTP requests for auditing and debugging.
+- **CORS Management**: Configurable middleware for handling Cross-Origin Resource Sharing (CORS).
+- **MongoDB Integration**: Leveraging MongoDB for robust data storage and retrieval capabilities.
+- **Static Files**: Serving static files like uploads from a dedicated directory.
+- **Swagger UI**: Interactive, user-friendly API documentation accessible via Swagger UI.
+- **Environment Variable Configurations**: Safely managing configurations and secrets with a `.env` file.
 
 ## Folder Structure
 
