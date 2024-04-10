@@ -153,13 +153,13 @@ router.delete('/:id', authMiddleware, taskController.deleteTask);
  *         description:
  *           type: string
  *           description: The description of the task
- *         completed:
+ *         status:
  *           type: boolean
  *           description: The status of the task
  *       example:
  *         title: Do given things
  *         description: Reading,writing
- *         completed: pending
+ *         status: pending
  */
 
 module.exports = router;
