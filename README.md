@@ -13,7 +13,7 @@
 - Error handling middlewares for graceful error responses.
 - Swagger documentation for API endpoints.
 
-## Structure
+## Folder Structure
 
 Below is an outline of the important files and folders included in the AuthCRUDFileManager project:
 ```
@@ -101,6 +101,10 @@ Start the server:
 npm start
 ```
 The server will start on port 3001 or the next available port.
+
+## Postman
+
+You can find the Postman collection in `/postman` directory to easily test the API endpoints.
 
 
 ### API Documentation
