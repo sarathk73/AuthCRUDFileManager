@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -37,6 +38,8 @@ const taskRoutes = require('./src/routes/taskRoutes');
 const fileRoutes = require('./src/routes/fileRoutes');
 
 app.use('/api/user', authApiLimiter);
+
+app.use(morgan('combined'));
 
 app.use(errorHandler);
 
