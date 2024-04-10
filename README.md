@@ -93,7 +93,7 @@ Install the necessary node modules:
 ### Configuration
 
 Configure your environment variables appropriately:
-Create a .env file in the root directory and add the following:
+-Create a .env file in the root directory and add the following:
 ```plain
 DB_CONNECTION=mongodb+srv://your-db-connection-string
 JWT_SECRET=your-secret
