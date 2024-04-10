@@ -56,36 +56,31 @@ REFRESH_TOKEN_SECRET=your-secret
 
 PORT=3001
 ```
-
-### Usage
-Start the application with the following command:
-```bash
-node server.js  # Starts the server
+Start the server:
 ```
-### Endpoints Overview
-User Registration:POST /api/auth/register
-User Login:POST /api/auth/login
-Token Refresh:POST /api/auth/refresh
-<br/>
-CRUD for Resources:
-Create: POST /api/resource/
-Read: GET /api/resource/:id
-Update: PUT /api/resource/:id
-Delete: DELETE /api/resource/:id
-<br/>
-File Upload:POST /api/files/upload
-File Download:GET /api/files/download/:filename
-### Running Tests
-To run the automated tests for this system, use:
-bash
-npm test
-Built With
-Express.js - The web framework used
-MongoDB - Database
-jsonwebtoken - JWT generation and verification
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-Versioning
-We use SemVer for versioning.
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+npm start
+```
+The server will start on port 3001 or the next available port.
+
+
+### API Documentation
+The API documentation is provided via Swagger, which outlines all the routes, possible parameters, and responses. Access the interactive documentation at:
+```bash
+http://localhost:3001/api-docs
+```
+Replace http://localhost:3001 with your production URL if applicable
+
+### Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
+
+### Authors
+. Initial work -sarathk73
+
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+### Acknowledgments
+<ul>
+   <li>Hat tip to anyone whose code was used</li>
+   <li>Inspiration</li>
+   <li>Etc</li>
+</ul>
