@@ -13,6 +13,41 @@
 - Error handling middlewares for graceful error responses.
 - Swagger documentation for API endpoints.
 
+## Project Structure
+
+Below is an outline of the important files and folders included in the AuthCRUDFileManager project:
+```
+/AuthCRUDFileManager
+|-- /node_modules
+|-- src
+    |-- /config
+        |-- config.js
+        |-- swagger.js
+    |-- /controllers
+        |-- authController.js
+        |-- userController.js
+        |-- fileController.js
+        |-- validation.js
+    |-- /middleware
+        |-- authMiddleware.js
+        |-- errorHandler.js
+        |-- fileUploadMiddleware.js
+    |-- /models
+        |-- userModel.js
+        |-- taskModel.js
+    |-- /routes
+        |-- authRoutes.js
+        |-- userRoutes.js
+        |-- fileRoutes.js
+|-- /uploads
+|-- server.js
+|-- .gitignore
+|-- README.md
+|-- package-loack.json
+|-- package.json
+
+```
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
