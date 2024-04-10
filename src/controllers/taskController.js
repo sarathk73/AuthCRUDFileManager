@@ -1,6 +1,8 @@
 
 const Task = require('../models/taskModel');
 
+const { taskValidation } = require('./validation');
+
 const { jwt: jwtConfig } = require('../config/config');
 
 const generateToken = (user) => {
@@ -11,6 +13,8 @@ const generateToken = (user) => {
 
 
 exports.createTask = async (req, res) => {
+    const { error } = taskValidation(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
     try {
         const task = new Task(req.body);
         await task.save();
@@ -42,6 +46,8 @@ exports.getTask = async (req, res) => {
 };
 
 exports.updateTask = async (req, res) => {
+    const { error } = taskValidation(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
     try {
         const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!task) {
