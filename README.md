@@ -1,25 +1,31 @@
 # AuthCRUDFileManager
-
-AuthCRUDFileManager is a comprehensive backend solution developed with Node.js that provides user authentication using JSON Web Tokens (JWT), a simple CRUD API for resource management, and a file upload and download capability integrated with a secure system.
+<p align="center">
+  <img src="https://i.ibb.co/LdNJmXm/task2-1.png" alt="Swagger UI"/>
+</p>
+AuthCRUDFileManager is a Node.js-based API solution for secure authentication, CRUD operations, and file management. This API leverages modern security practices to offer a robust backend suitable for various applications requiring user management and file storage capabilities.
 
 ## Features
 
-- **User Authentication**: Utilizes JWT for secure user authentication, including endpoints for registration, login, and token refresh.
-- **CRUD API**: Full Create, Read, Update, Delete API functionality for managing resources, such as users, products, or tasks.
-- **File Management**: API endpoints designed for secure file uploading and downloading with type validation and size limitation.
+- JWT (JSON Web Tokens) based authentication system.
+- CRUD operations for user management.
+- Secure file upload and management.
+- Input validation to ensure data integrity.
+- Error handling middlewares for graceful error responses.
+- Swagger documentation for API endpoints.
 
 ## Getting Started
 
-These instructions will get your copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What you need to install the software:
+What things you need to install the software and how to install them:
 
-- Node.js
-- npm (Node Package Manager)
-- MongoDB (or other preferred databases)
-
+```
+node.js
+npm
+A MongoDB database
+```
 ### Installation
 
 A step-by-step series of examples that tell you how to get a development environment running:
@@ -27,48 +33,56 @@ A step-by-step series of examples that tell you how to get a development environ
 1. Clone the repository:
 ```bash
    git clone https://github.com/sarathk73/AuthCRUDFileManager.git
+   cd AuthCRUDFileManager
+
+
 ```
+Install the necessary node modules:
+ ```bash
+   npm install
+```
+
 
 ### Configuration
 
 Configure your environment variables appropriately:
-env
-# .env file
-```text
+```plain
+Create a .env file in the root directory and add the following:
+DB_CONNECTION=mongodb+srv://your-db-connection-string
+JWT_SECRET=your-secret
+# JWT secret for signing tokens
+JWT_SECRET=your-secret
 
-DB_URI=mongodb://localhost:27017/your-db
-JWT_SECRET=your_secret_key
+# Refresh token secret for signing refresh tokens
+REFRESH_TOKEN_SECRET=your-secret
+
+PORT=3001
 ```
+Start the server:
+```
+npm start
+```
+The server will start on port 3001 or the next available port.
 
-### Usage
-Start the application with the following command:
+
+### API Documentation
+The API documentation is provided via Swagger, which outlines all the routes, possible parameters, and responses. Access the interactive documentation at:
 ```bash
-node server.js  # Starts the server
+http://localhost:3001/api-docs
 ```
-### Endpoints Overview
-User Registration:POST /api/auth/register
-User Login:POST /api/auth/login
-Token Refresh:POST /api/auth/refresh
-<br/>
-CRUD for Resources:
-Create: POST /api/resource/
-Read: GET /api/resource/:id
-Update: PUT /api/resource/:id
-Delete: DELETE /api/resource/:id
-<br/>
-File Upload:POST /api/files/upload
-File Download:GET /api/files/download/:filename
-### Running Tests
-To run the automated tests for this system, use:
-bash
-npm test
-Built With
-Express.js - The web framework used
-MongoDB - Database
-jsonwebtoken - JWT generation and verification
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-Versioning
-We use SemVer for versioning.
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+Replace http://localhost:3001 with your production URL if applicable
+
+### Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
+
+### Authors
+. Initial work -sarathk73
+
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+### Acknowledgments
+<ul>
+   <li>Hat tip to anyone whose code was used</li>
+   <li>Inspiration</li>
+   <li>Etc</li>
+</ul>
