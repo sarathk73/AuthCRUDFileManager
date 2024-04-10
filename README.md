@@ -134,10 +134,4 @@ We use SemVer for versioning. For the versions available, see the tags on this r
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-### Acknowledgments
 
-<ul>
-   <li>Hat tip to anyone whose code was used</li>
-   <li>Inspiration</li>
-   <li>Etc</li>
-</ul>
