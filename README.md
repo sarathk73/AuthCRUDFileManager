@@ -42,6 +42,7 @@ Below is an outline of the important files and folders included in the AuthCRUDF
 |-- /uploads
 |-- server.js
 |-- .gitignore
+|-- .env
 |-- README.md
 |-- package-loack.json
 |-- package.json
