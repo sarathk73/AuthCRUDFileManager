@@ -40,6 +40,8 @@ Below is an outline of the important files and folders included in the AuthCRUDF
         |-- userRoutes.js
         |-- fileRoutes.js
 |-- /uploads
+|-- /postman
+        |--AuthCRUDFileManager.json
 |-- server.js
 |-- .gitignore
 |-- .env
