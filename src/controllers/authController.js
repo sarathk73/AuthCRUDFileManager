@@ -8,9 +8,10 @@ const generateToken = (user) => {
       expiresIn: '1h',
   });
 };
-
+const { registerValidation, loginValidation } = require('./validation');
 exports.registerUser = async (req, res) => {
-  
+  const { error } = registerValidation(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
   const userExists = await User.findOne({ username: req.body.username });
   if (userExists) {
       return res.status(400).send('Username already taken.');
@@ -49,7 +50,8 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
-  
+  const { error } = loginValidation(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
   const user = await User.findOne({ username: req.body.username });
   if (!user) {
       return res.status(400).send('Username is not found.');
