@@ -13,7 +13,7 @@
 - Error handling middlewares for graceful error responses.
 - Swagger documentation for API endpoints.
 
-## Project Structure
+## Structure
 
 Below is an outline of the important files and folders included in the AuthCRUDFileManager project:
 ```
@@ -112,7 +112,8 @@ Replace http://localhost:3001 with your production URL if applicable
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 ### Authors
-. Initial work -sarathk73
+
+- Sarath K - Initial work - [sarathk73](https://github.com/sarathk73)
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details
