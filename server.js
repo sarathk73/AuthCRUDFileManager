@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
+const compression = require('compression');
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./src/config/swagger');
@@ -19,7 +20,10 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     process.exit(1);  
 });
 
-app.use(helmet());
+app.use(compression());
+
+app.use(helmet()); // secure HTTP headers
+
 
 const authApiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, 
@@ -39,7 +43,7 @@ const fileRoutes = require('./src/routes/fileRoutes');
 
 app.use('/api/user', authApiLimiter);
 
-app.use(morgan('combined'));
+app.use(morgan('combined')); //HTTP logs
 
 app.use(errorHandler);
 
