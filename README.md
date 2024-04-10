@@ -98,7 +98,7 @@ PORT=3001
 ```
 Start the server:
 ```
-npm start
+npm start or node server.js
 ```
 The server will start on port 3001 or the next available port.
 
