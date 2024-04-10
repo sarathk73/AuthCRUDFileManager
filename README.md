@@ -1,25 +1,29 @@
 # AuthCRUDFileManager
 
-AuthCRUDFileManager is a comprehensive backend solution developed with Node.js that provides user authentication using JSON Web Tokens (JWT), a simple CRUD API for resource management, and a file upload and download capability integrated with a secure system.
+AuthCRUDFileManager is a Node.js-based API solution for secure authentication, CRUD operations, and file management. This API leverages modern security practices to offer a robust backend suitable for various applications requiring user management and file storage capabilities.
 
 ## Features
 
-- **User Authentication**: Utilizes JWT for secure user authentication, including endpoints for registration, login, and token refresh.
-- **CRUD API**: Full Create, Read, Update, Delete API functionality for managing resources, such as users, products, or tasks.
-- **File Management**: API endpoints designed for secure file uploading and downloading with type validation and size limitation.
+- JWT (JSON Web Tokens) based authentication system.
+- CRUD operations for user management.
+- Secure file upload and management.
+- Input validation to ensure data integrity.
+- Error handling middlewares for graceful error responses.
+- Swagger documentation for API endpoints.
 
 ## Getting Started
 
-These instructions will get your copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What you need to install the software:
+What things you need to install the software and how to install them:
 
-- Node.js
-- npm (Node Package Manager)
-- MongoDB (or other preferred databases)
-
+```bash
+node.js
+npm
+A MongoDB database
+```
 ### Installation
 
 A step-by-step series of examples that tell you how to get a development environment running:
