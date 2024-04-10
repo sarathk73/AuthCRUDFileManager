@@ -1,9 +1,8 @@
 # AuthCRUDFileManager
 <b>AuthCRUDFileManager is a Node.js-based API solution for secure authentication, CRUD operations, and file management. This API leverages modern security practices to offer a robust backend suitable for various applications requiring user management and file storage capabilities.</b>
-<br/>
+
 ![Swagger UI](/images/task2_1.png)
 ![Swagger UI](/images/task2_2.png)
-<br>
 
 ## Features
 
