@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "81f78c36-e5dd-4f44-9899-809c4e480918",
+		"name": "AuthCRUDFileManager",
+		"description": "AuthCRUDFileManager is a comprehensive backend solution developed with Node.js that provides user authentication using JSON Web Tokens (JWT), a simple CRUD API for resource management, and a file upload and download capability integrated with a secure system.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34103413"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"sarath_demo\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"sarath_demo\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE2MDc4MDZhNWE0Y2RhN2NlNzFkMmYiLCJpYXQiOjE3MTI3MTk3NzQsImV4cCI6MTcxMzMyNDU3NH0.myT-rjYmnjdsK5UchXnRQ_Cc17JL1WIhN7ZJO5p30Eo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/user/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE2MDc4MDZhNWE0Y2RhN2NlNzFkMmYiLCJpYXQiOjE3MTI3MTk4MTEsImV4cCI6MTcxMjcyMzQxMX0.uqRDsyz25pay5Kr4QHj97ntVVGwBq7x4_5wvyoF67rA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\n       \"title\": \"Purchase things\",\n       \"description\": \"Purchase milk\"\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE2MDc4MDZhNWE0Y2RhN2NlNzFkMmYiLCJpYXQiOjE3MTI3MTk4MTEsImV4cCI6MTcxMjcyMzQxMX0.uqRDsyz25pay5Kr4QHj97ntVVGwBq7x4_5wvyoF67rA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single task by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjEyMzkwMzNkYTMzNmUwZjgwNTFiOTEiLCJpYXQiOjE3MTI1NDkxNTgsImV4cCI6MTcxMjU1Mjc1OH0.BiFaqA0scTIdUXjdxRTsoAWymkD9uSdICsXmt5uN3ZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/tasks/661405af45d3e9a0d80a3ac7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tasks",
+						"661405af45d3e9a0d80a3ac7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a task by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjEyMzkwMzNkYTMzNmUwZjgwNTFiOTEiLCJpYXQiOjE3MTI1NDkxNTgsImV4cCI6MTcxMjU1Mjc1OH0.BiFaqA0scTIdUXjdxRTsoAWymkD9uSdICsXmt5uN3ZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\n         \"title\": \"Updated Task Title\",\n         \"description\": \"Updated Task Description\",\n         \"status\": \"Completed\"\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/tasks/66136d49b847f95f70af3b0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tasks",
+						"66136d49b847f95f70af3b0c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a task by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjEyMzkwMzNkYTMzNmUwZjgwNTFiOTEiLCJpYXQiOjE3MTI1NDkxNTgsImV4cCI6MTcxMjU1Mjc1OH0.BiFaqA0scTIdUXjdxRTsoAWymkD9uSdICsXmt5uN3ZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/tasks/66136d49b847f95f70af3b0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tasks",
+						"66136d49b847f95f70af3b0c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Endpoint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjEyMzkwMzNkYTMzNmUwZjgwNTFiOTEiLCJpYXQiOjE3MTI1NzY4MDcsImV4cCI6MTcxMjU4MDQwN30.7GUwPt9muACTy3mEZ6ooDXuYb7CIi82bvWR98k3jHHU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/daya/Downloads/2.jpeg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/daya/Downloads/ISTE.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/files/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"files",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download Endpoint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjEyMzkwMzNkYTMzNmUwZjgwNTFiOTEiLCJpYXQiOjE3MTI1Nzk0OTAsImV4cCI6MTcxMjU4MzA5MH0.pp6Pq5UcAg8SkHAi2DyUKtspOXZgMz-61nPEswD--qc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/files/download/2.jpeg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"files",
+						"download",
+						"2.jpeg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
